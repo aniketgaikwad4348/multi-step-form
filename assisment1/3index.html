@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.progress-bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0,0 , 0, 0.2);
+}
+
+.progress-per{
+    width: 55%;
+    height: 10px;
+    background-color: rgb(10, 156, 107);
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 650px;
+    margin-left: 25%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    
+    
+
+   
+   
+}
+img{
+    margin-top: -150px;
+    padding-left: 1rem;
+    width: 100%;
+    height: 55%;
+}
+
+span{
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    padding-right: 10px;
+}
+
+button{
+    margin-top: 35%;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: black;
+    cursor: pointer;
+    position: absolute;
+}
+button a{
+    color: aliceblue;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .rating {
+                text-align: center;
+            }
+
+            span p {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            span {
+                margin-left: 0;
+                margin-top: 10%;
+                padding-right: 60%;
+
+            }
+            img{
+                margin-left: -60%;
+                margin-top: 10%;
+                width: 350px;
+                height: auto;
+            }
+            h1{
+                margin-left: 30px;
+            }
+            button{
+                margin-right: 65%;
+                margin-top: 110%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress-per"></div>
+    </div>
+    <div class="container">
+        <img src="img/balance.png" alt="">
+        <span>
+            <h1>You're in the right place</h1>
+            <span><p>Brilliant gets you hands-on to help improve your professional skills and knowledge. You'll interact with concepts and solve fun problems in math, science, and computer science.</p></span>
+        </span>
+        <button id="continueBtn">Continue</button>
+    </div>
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", function() {
+          window.location.href = "4index.html";
+        });
+      </script>
+</body>
+</html>

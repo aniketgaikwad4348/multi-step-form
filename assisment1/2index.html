@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .progress-per {
+            width: 30%;
+            height: 10px;
+            background-color: rgb(10, 156, 107);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: rgb(112, 111, 111);
+        }
+
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-container img {
+            width: 55px;
+            height: 55px;
+            padding-top: 5px;
+            padding-left: 5px;
+            position: absolute;
+        }
+
+        .radio-container input[type="radio"] {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .radio-container label {
+            display: inline-block;
+            width: 100%;
+            padding: 20px 100px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .radio-container input[type="radio"]:checked+label {
+            background-color: rgb(191, 239, 223);
+            color: black;
+        }
+
+        .radio-container input[type="radio"]:focus+label {
+            outline: 2px solid #007bff;
+        }
+
+        button {
+            margin: 20px auto;
+            display: block;
+            width: 50%;
+            max-width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            color: aliceblue;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        button a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .radio-container img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .radio-container label {
+                padding: 15px;
+            }
+
+            button {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="progress-bar">
+    <div class="progress-per"></div>
+</div>
+<div class="container">
+    <h1>which are you most interested in?</h1>
+    <h2>Choose just one. This will help us get you started (but won't limit your experience).</h2>
+    <div class="radio-container">
+        <div class="option">
+            <img src="img/graph.jpg" alt="">
+            <input type="radio" id="option1" name="options">
+            <label for="option1">Learning specific skill to advance my career</label><br>
+        </div>
+        <div class="option">
+            <img src="img/earth.jpg" alt="">
+            <input type="radio" id="option2" name="options">
+            <label for="option2">Exploring new topics I'm interested in</label><br>
+        </div>
+        <div class="option">
+            <img src="img/thinking.jpg" alt="">
+            <input type="radio" id="option3" name="options">
+            <label for="option3">Refreshing my math foundation</label>
+        </div>
+        <div class="option">
+            <img src="img/goal.png" alt="">
+            <input type="radio" id="option4" name="options">
+            <label for="option4">Exercising my brain to stay sharp</label>
+        </div>
+        <div class="option">
+            <img src="img/eyes.jpg" alt="">
+            <input type="radio" id="option5" name="options">
+            <label for="option5">Something else</label>
+        </div>
+    </div>
+
+    <button id="continueBtn">Continue</button>
+</div>
+<script>
+    document.getElementById('continueBtn').addEventListener('click', function() {
+        var options = document.querySelectorAll('input[name="options"]');
+        var isChecked = false;
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        if (!isChecked) {
+            alert("Please select an option before proceeding.");
+        } else {
+            window.location.href = "3index.html";
+        }
+    });
+</script>
+</body>
+</html>

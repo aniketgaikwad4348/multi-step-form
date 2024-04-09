@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi form</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader{
+            height: 50px;
+            width: 50px;
+            margin-bottom: 12rem;
+            border: 10px  solid #ec8e29;
+            border-radius: 50%;
+            border-right-color: #cbcbcb;
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        p{
+            font-size: 30px;
+            position: absolute;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        p span{
+            margin-left: 39%;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <p>Finding learning path recommendetions for you based on<br><span>your response</span></p>
+
+    <script>
+        setTimeout(function() {
+        window.location.href = "7index.html"; 
+    }, 3000); 
+    </script>
+</body>
+</html>
